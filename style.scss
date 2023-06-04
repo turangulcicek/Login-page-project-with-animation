@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  background: linear-gradient(to right, #000000 0%, #1da1f2 100%);
+}
+.container {
+  background-color: white;
+  max-width: 350px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 5px;
+  position: relative;
+
+  .logo {
+    img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      position: absolute;
+      left: 70%;
+      top: 5px;
+      border: 5px solid #f7479f;
+    }
+  }
+
+  form {
+    .title {
+      font-size: 30px;
+      font-weight: 600;
+      margin: 20px 0 10px 0;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        height: 4px;
+        width: 33px;
+        bottom: 2px;
+        left: 0;
+        border-radius: 5px;
+        background-color: #1da1f2;
+      }
+    }
+
+   
+    
+    .underline:before{
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        background-color: #ccc;
+        left: 0;
+        right: 0;
+
+       
+    }
+
+    .underline:after{
+        position: absolute;
+        content: "";
+        height: 2px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background-color: red;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all .3s ease;
+
+    }
+
+
+    .input-box {
+      width: 100%;
+      height: 45px;
+      margin-top: 25px;
+      position: relative;
+        
+        input {
+        height: 100%;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border: none;
+
+        
+        
+        &:focus ~ .underline:after{
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        &:valid ~ .underline:after{
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        
+        
+      }
+    }
+
+    .button{
+         margin: 40px 0px 20px 0px;
+         
+
+        
+         
+    }
+  }
+}
+
+#submit_button{
+    background-color: red;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+#submit_button:hover{
+    background-color: rgba(43, 31, 31, 0.222);
+    border-radius: 10px;
+    color: red;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+
+
+.github, .twitter, .facebook{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0px 20px 0px;
+    padding: 10px;
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    
+}
+
+ i{
+    padding: 0px 30px 0px 0px ;
+    
+}
+
+.github {
+    background-color: black;
+    cursor: pointer;
+}
+.github:hover{
+    opacity: .4;
+}
+
+.twitter{
+    background-color: #1ad1f2;
+    cursor: pointer;
+}
+.twitter:hover{
+    opacity: .4;
+}
+
+
+.facebook{
+    background-color: #4267b2;
+    cursor: pointer;
+}
+
+.facebook:hover{
+    opacity: .4;
+
+}
+
